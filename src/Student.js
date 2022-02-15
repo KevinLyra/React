@@ -1,18 +1,21 @@
-/*const Student =  {
-    name: "Paul",
-    lastName: "Dumont",
-    birthdate: "12/07/1990",
-    campus: "Aubagne",
-    avatar:
-      "https://cdn0.iconfinder.com/data/icons/kawaii-male-expressions/64/11-01-512.png",
-    likeJS: true,
-    likePHP: false,
-    languages: ["JS", "PHP", "HTML", "CSS", "PYTHON", "TYPESCRIPT"],
-    yearsOfExperience: 0,
-    action: () => alert("Bonjour je m'appelle Paul")
-  };*/
+import Language from "./Language";
 
-  const Student = (props) => {
-    return <p>Hello, {props.name}</p>;
-   };
+
+
+
+const Student = ({name , lastName , likeJS, likePHP , action , languages}) => {
+
+    return (
+      <div>
+        <p>hello, {name}&nbsp;
+              {lastName}&nbsp;        
+        </p>
+        <p> {likeJS ? "j'aime le js" : null}
+             {likePHP ? "bouh" : null}  
+        </p>
+          <button onClick={action}>Click</button>
+          <Language lang={languages}/>
+      </div>
+    )};
+
 export default Student;

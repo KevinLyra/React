@@ -1,6 +1,9 @@
 import './App.css';
 import Student from './Student';
-import Test from './Test';
+import Compteur from './Compteur';
+import MyDate from './Date';
+
+
 
 
 function App() {
@@ -11,20 +14,23 @@ function App() {
     <div className="App">
       <header className="App-header">
         
-        {student1.map((items ,index) =>{
-         return <Test 
+        {/*students.map((item ,index) =>{
+         return <Student 
                   key={index} 
-                  name={items.name}
-                  lastName={items.lastName}
-                  likeJS={items.likeJS}
+                  {...item}
                   />
-        })}
+                
+                  
+                  
+        })*/}
+        <Compteur />
+        <MyDate />
       </header>
     </div>
   );
 }
 
-const student1 = [{
+const students = [{
   name: "Paul",
   lastName: "Dumont",
   birthdate: "12/07/1990",
